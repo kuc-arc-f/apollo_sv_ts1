@@ -10,8 +10,8 @@ const LibTask = {
     try {
       const prisma = new PrismaClient()
       const items = await prisma.task.findMany()
-//console.log( items)            
       await prisma.$disconnect()
+//console.log( items)
       return items;
     } catch (err) {
       throw new Error('Error , getItems');
